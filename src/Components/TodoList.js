@@ -8,8 +8,13 @@ function TodoList(props) {
     <i className="fa-solid fa-trash-can icon-delete"
     onClick= {e =>{
         props.deleteItem(props.index)
-    }} >
-    </i>
+    }} > </i>
+    <i class="fa-solid fa-pen-to-square icon-edit" 
+    onClick = { e =>{
+      props.editItem(props.index)
+    }}
+    ></i>
+    
     </span>
    </li>
   )

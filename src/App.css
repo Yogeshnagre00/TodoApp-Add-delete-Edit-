@@ -92,3 +92,7 @@ body{
 .icon-delete:hover{
   color: red;
 }
+
+.icon-edit:hover{
+  color: yellow;
+}

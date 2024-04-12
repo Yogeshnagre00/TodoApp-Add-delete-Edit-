@@ -16,8 +16,21 @@ function App() {
     let newListTodo = [...listTodo];
     newListTodo.splice(key, 1);
     setListTodo([...newListTodo, ]);
+
+
+
   }
 
+  const editListItem = (index) => {
+    const editedText = prompt("Edit Todo", listTodo[index]);
+    if (editedText !== null) {
+      const newTodos = [...listTodo];
+      newTodos[index] = editedText;
+      setListTodo(newTodos);
+    }
+  }
+
+  
   return (
     <div className="main-container">
       <div className="center-container">
@@ -26,7 +39,7 @@ function App() {
          <hr/>
          {listTodo.map((listItem, i) => {
           return (
-            <TodoList key = {i} index={i} item = {listItem} deleteItem = {deleteListItem}/> 
+            <TodoList key = {i} index={i} item = {listItem} deleteItem = {deleteListItem}  editItem = {editListItem} /> 
           )
          }
          )}
